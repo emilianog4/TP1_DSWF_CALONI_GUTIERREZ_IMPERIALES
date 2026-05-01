@@ -57,4 +57,4 @@ _AGREGAR capturas de pantalla de estas funciones aquí_
 
 ---
 
-_Este proyecto fue realizado para la materia de Desarrollo Web en el IFTS N.°29 ._
+_Este proyecto fue realizado para la materia de Desarrollo de Sistemas Web (Front End) en el IFTS N.°29 ._
