@@ -1,0 +1,131 @@
+/* Variables para consistencia de colores según Paso 2 */
+:root {
+  --fondo: #f8fafc;
+  --texto: #1e293b;
+  --acento: #3b82f6;
+  --blanco: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+  margin: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--acento);
+}
+
+/* Navegación */
+nav {
+  background: var(--texto);
+  padding: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Diseño Adaptable (Responsive Design) - REQUERIMIENTO OBLIGATORIO */
+
+/* Mobile: 400px */
+@media (min-width: 400px) {
+  main {
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet: 900px */
+@media (min-width: 900px) {
+  .grid-integrantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Desktop: 1200px */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+/* Estilos Emi */
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.tarjeta-presentacion {
+  background: var(--blanco);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.3s ease; /* Para la animación de JS */
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--acento);
+}
+ul {
+  text-align: left;
+}
+.btn-volver {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--texto);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-volver:hover {
+  background-color: var(--acento);
+}
+
+/* Bitacora */
+.contenedor-bitacora {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.entrada-bitacora {
+  background: var(--blanco);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--acento);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.entrada-bitacora h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}

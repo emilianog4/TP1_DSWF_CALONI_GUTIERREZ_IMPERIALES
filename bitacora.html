@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitácora de Desarrollo - TP1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="bitacora.html" class="active">Bitácora</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contenedor-bitacora">
+      <h1>Bitácora de Desarrollo - TP1</h1>
+
+      <section class="entrada-bitacora">
+        <h2>1. Decisiones de Diseño</h2>
+        <p>
+          El equipo optó por una estética "Tech-Professional". Seleccionamos una
+          paleta de colores basada en tonos azul pizarra (`#1E293B`) y azul
+          brillante (`#3B82F6`) sobre fondos claros para garantizar la
+          legibilidad y transmitir profesionalismo. Utilizamos Google Fonts
+          (Montserrat para títulos e Inter para el cuerpo) para mejorar la
+          experiencia visual.
+        </p>
+      </section>
+
+      <section class="entrada-bitacora">
+        <h2>2. Dificultades y Resoluciones</h2>
+        <ul>
+          <li>
+            <strong>Desafío:</strong> Implementar el diseño adaptable
+            (Responsive Design) para los tres breakpoints solicitados (400px,
+            900px, 1200px). <br /><strong>Solución:</strong> Se utilizaron Media
+            Queries en CSS para reorganizar los elementos de la tarjeta de
+            perfil, pasando de un diseño vertical en móviles a uno más espacioso
+            en escritorio[cite: 1].
+          </li>
+          <li>
+            <strong>Desafío:</strong> Errores en la vinculación de funciones de
+            JavaScript con los elementos del DOM. <br /><strong
+              >Solución:</strong
+            >
+            Se estandarizaron los IDs en el HTML y se utilizó `DOMContentLoaded`
+            para asegurar que el script se ejecute solo cuando el documento esté
+            totalmente cargado.
+          </li>
+        </ul>
+      </section>
+
+      <section class="entrada-bitacora">
+        <h2>3. Cambios Importantes</h2>
+        <p>
+          Originalmente, se consideró usar una sola página (Single Page
+          Application), pero se decidió seguir la consigna de archivos HTML
+          independientes para el índice y cada integrante, facilitando así el
+          mantenimiento y la organización del repositorio.
+        </p>
+      </section>
+
+      <div class="navegacion-interna">
+        <a href="index.html" class="btn-volver">Volver al Inicio</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - IFTS N.°29 - Bitácora de Proyecto</p>
+    </footer>
+  </body>
+</html>

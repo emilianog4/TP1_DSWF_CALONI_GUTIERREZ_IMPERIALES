@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emiliano Gutierrez</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="bitacora.html">Bitácora</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="perfil-container">
+      <section class="tarjeta-presentacion" id="mi-tarjeta">
+        <img
+          src="img/avatarGutierrez.png"
+          alt="Avatar de Emiliano"
+          class="foto-perfil"
+        />
+
+        <h1>Emiliano Gutierrez</h1>
+        <p><strong>Ubicación: </strong>Santa Fe</p>
+        <p><strong>Edad:</strong> 34 años</p>
+        <hr />
+
+        <div class="info-detallada">
+          <h3>Habilidades</h3>
+          <ul>
+            <li>Programación en Python y SQL</li>
+            <li>Análisis de Datos</li>
+            <li>Matemática</li>
+            <li>Resolución de problemas</li>
+          </ul>
+
+          <hr />
+          <h3>Películas Favoritas</h3>
+          <ul>
+            <li>Interstellar</li>
+            <li>Forrest Gump</li>
+            <li>El Señor de los Anillos</li>
+          </ul>
+
+          <hr />
+          <h3>Discos Favoritos</h3>
+          <ul>
+            <li>(What's the Story) Morning Glory? - Oasis</li>
+            <li>Honestidad Brutal - Andres Calamaro</li>
+            <li>Antihumano - Ataque 77</li>
+          </ul>
+        </div>
+
+        <hr />
+        <!-- Interacción JS: Botón para cambiar el estilo de la tarjeta -->
+        <button id="btn-color-perfil">Cambiar Estilo de Tarjeta</button>
+
+        <!-- Botón obligatorio de navegación para no usar "Atrás" -->
+        <div class="navegacion-interna">
+          <a href="index.html" class="btn-volver">Volver al Inicio</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script-perfil.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP1 - Equipo [Nombre de tu Equipo]</title>
+    <!-- Google Fonts: Montserrat para títulos e Inter para cuerpo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="bitacora.html">Bitácora</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="presentacion" class="hero">
+        <h1 id="main-title">Equipo 7</h1>
+        <p class="descripcion-equipo">
+          Somos un grupo de estudiantes del IFTS N.°29 enfocados en el
+          desarrollo de soluciones web modernas, combinando diseño prolijo con
+          funcionalidad técnica.
+        </p>
+      </section>
+
+      <section id="integrantes" class="grid-integrantes">
+        <h2>Nuestros Integrantes</h2>
+        <p>Selecciona a un integrante para ver su tarjeta de presentación:</p>
+        <ul class="lista-integrantes">
+          <li>
+            <a href="caloni.html" class="btn-integrante">Adriano Caloni </a>
+          </li>
+          <li>
+            <a href="gutierrez.html" class="btn-integrante"
+              >Emiliano Gutierrez</a
+            >
+          </li>
+          <li>
+            <a href="imperiales.html" class="btn-integrante"
+              >Jeremias Imperiales</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interacción JS Obligatoria: Un botón que muestra un mensaje -->
+      <section class="interaccion">
+        <button id="btn-bienvenida">Saludar al equipo</button>
+        <p id="mensaje-dinamico"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Proyecto Web IFTS N.°29 - Comisión Lunes/Viernes</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
