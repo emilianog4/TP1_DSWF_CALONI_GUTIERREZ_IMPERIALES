@@ -3,78 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bitácora de Desarrollo - TP1</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <title>BITÁCORA — EQUIPO 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <header>
+      <div class="score-bar">
+        <span>1UP &nbsp; 00000</span>
+        <span>HI-SCORE &nbsp; 99999</span>
+        <span>2UP &nbsp; 00000</span>
+      </div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="bitacora.html" class="active">Bitácora</a></li>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="bitacora.html" class="active">BITACORA</a></li>
         </ul>
       </nav>
     </header>
 
+    <div class="ticker-wrap">
+      <span class="ticker-inner">★ STORY MODE ★ BITACORA DE DESARROLLO ★ TP1 · 2026 ★ EQUIPO 7 ★ IFTS N°29 ★ STAGE 01 ★</span>
+    </div>
+
     <main class="contenedor-bitacora">
-      <h1>Bitácora de Desarrollo - TP1</h1>
+      <h1 class="bitacora-titulo">// STORY MODE</h1>
+      <p class="bitacora-intro">Registro del proceso de desarrollo, decisiones de diseño y resolución de problemas durante el TP1.</p>
 
-      <section class="entrada-bitacora">
-        <h2>1. Decisiones de Diseño</h2>
+      <div class="entrada-bitacora">
+        <h2>STAGE 01 — DECISIONES DE DISEÑO</h2>
         <p>
-          El equipo optó por una estética "Tech-Professional". Seleccionamos una
-          paleta de colores basada en tonos azul pizarra (`#1E293B`) y azul
-          brillante (`#3B82F6`) sobre fondos claros para garantizar la
-          legibilidad y transmitir profesionalismo. Utilizamos Google Fonts
-          (Montserrat para títulos e Inter para el cuerpo) para mejorar la
-          experiencia visual.
+          El equipo optó por una estética <strong>Arcade 90s / CRT</strong> que rompe con los diseños genéricos
+          habituales. Se eligió una paleta de tres colores neón: cyan (<code>#00ffff</code>) para P1,
+          magenta (<code>#ff00ff</code>) para P2 y amarillo (<code>#ffff00</code>) para P3, sobre un fondo
+          negro profundo (<code>#020408</code>). Las tipografías <em>Press Start 2P</em> (pixel font para títulos)
+          y <em>VT323</em> (fuente retro para cuerpo) provienen de Google Fonts. Se incorporaron scanlines CSS
+          animados, esquinas cortadas estilo sprite, y un ticker horizontal inferior que simula la pantalla de
+          una máquina de arcade.
         </p>
-      </section>
+      </div>
 
-      <section class="entrada-bitacora">
-        <h2>2. Dificultades y Resoluciones</h2>
+      <div class="entrada-bitacora">
+        <h2>STAGE 02 — DIFICULTADES Y RESOLUCIONES</h2>
         <ul>
           <li>
-            <strong>Desafío:</strong> Implementar el diseño adaptable
-            (Responsive Design) para los tres breakpoints solicitados (400px,
-            900px, 1200px). <br /><strong>Solución:</strong> Se utilizaron Media
-            Queries en CSS para reorganizar los elementos de la tarjeta de
-            perfil, pasando de un diseño vertical en móviles a uno más espacioso
-            en escritorio[cite: 1].
+            <strong>Desafío:</strong> Implementar los tres breakpoints obligatorios (400px, 900px, 1200px)
+            manteniendo la estética pixel sin que los elementos se rompan en mobile.<br />
+            <strong>Solución:</strong> Se usó <code>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))</code>
+            para que las cards de jugadores se adapten automáticamente, y <code>clamp()</code> en el título principal
+            para escalar la tipografía de forma fluida.
           </li>
           <li>
-            <strong>Desafío:</strong> Errores en la vinculación de funciones de
-            JavaScript con los elementos del DOM. <br /><strong
-              >Solución:</strong
-            >
-            Se estandarizaron los IDs en el HTML y se utilizó `DOMContentLoaded`
-            para asegurar que el script se ejecute solo cuando el documento esté
-            totalmente cargado.
+            <strong>Desafío:</strong> Los scanlines implementados con <code>position: fixed</code>
+            inicialmente generaban conflictos con el z-index de otros elementos.<br />
+            <strong>Solución:</strong> Se aplicó <code>pointer-events: none</code> y <code>z-index: 9999</code>
+            al pseudo-elemento <code>::before</code> del body, permitiendo que los scanlines sean puramente
+            decorativos sin interferir con la interactividad.
+          </li>
+          <li>
+            <strong>Desafío:</strong> Unificar la función JS de cambio de tema en un único archivo
+            <code>script-perfil.js</code> para los tres perfiles, donde cada jugador tiene su propio color.<br />
+            <strong>Solución:</strong> Se detecta el color de borde actual de la tarjeta (<code>getComputedStyle</code>)
+            para determinar el tema del jugador, y se cicla entre 5 esquemas de color que respetan el color
+            principal del personaje.
           </li>
         </ul>
-      </section>
+      </div>
 
-      <section class="entrada-bitacora">
-        <h2>3. Cambios Importantes</h2>
+      <div class="entrada-bitacora">
+        <h2>STAGE 03 — CAMBIOS IMPORTANTES</h2>
         <p>
-          Originalmente, se consideró usar una sola página (Single Page
-          Application), pero se decidió seguir la consigna de archivos HTML
-          independientes para el índice y cada integrante, facilitando así el
-          mantenimiento y la organización del repositorio.
+          Se realizaron dos rediseños completos durante el TP1. El primer diseño era un tema
+          oscuro genérico estilo GitHub (dark mode con azul eléctrico y Space Grotesk), que fue
+          descartado por considerarse un resultado típico de herramientas de IA sin identidad propia.
+          El segundo diseño, el actual, adopta la estética Arcade 90s como propuesta diferenciadora.
+          Se reescribieron todos los archivos CSS, HTML y JS para soportar el nuevo sistema visual.
         </p>
-      </section>
+      </div>
 
-      <div class="navegacion-interna">
-        <a href="index.html" class="btn-volver">Volver al Inicio</a>
+      <div class="entrada-bitacora">
+        <h2>STAGE 04 — USO DE IA</h2>
+        <p>
+          Se utilizó <strong>Claude (Anthropic — Sonnet 4.6)</strong> como asistente técnico durante
+          el desarrollo del TP1. La IA colaboró en la definición de la paleta de colores, el sistema
+          de variables CSS, la implementación de los scanlines, las esquinas cortadas con
+          <code>clip-path</code>, la lógica de JavaScript para el ciclo de temas y la documentación
+          del README. Los avatares fueron generados con <strong>Gemini (Google)</strong> aplicando
+          estilo pixel-art para preservar la privacidad de los integrantes.
+        </p>
+      </div>
+
+      <div class="perfil-acciones" style="padding:1.5rem 0 0;border:none">
+        <a href="index.html" class="btn-volver">◀ VOLVER AL INICIO</a>
       </div>
     </main>
 
     <footer>
-      <p>&copy; 2026 - IFTS N.°29 - Bitácora de Proyecto</p>
+      <p>© 2026 — EQUIPO 7 · IFTS N.°29 · STORY MODE</p>
     </footer>
   </body>
 </html>

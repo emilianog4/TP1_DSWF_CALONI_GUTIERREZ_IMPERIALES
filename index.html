@@ -3,63 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP1 - Equipo [Nombre de tu Equipo]</title>
-    <!-- Google Fonts: Montserrat para títulos e Inter para cuerpo -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <title>EQUIPO 7 — IFTS N.°29</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <header>
+      <div class="score-bar">
+        <span>1UP &nbsp; 00000</span>
+        <span>HI-SCORE &nbsp; 99999</span>
+        <span>2UP &nbsp; 00000</span>
+      </div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="bitacora.html">Bitácora</a></li>
+          <li><a href="index.html" class="active">INICIO</a></li>
+          <li><a href="bitacora.html">BITACORA</a></li>
         </ul>
       </nav>
     </header>
 
+    <div class="ticker-wrap">
+      <span class="ticker-inner">★ EQUIPO 7 ★ IFTS N°29 ★ DESARROLLO DE SISTEMAS WEB ★ TP1 · 2026 ★ HIGH SCORE: APROBADO ★ COMISION VIERNES ★ STAGE 01 ★ EQUIPO 7 ★ IFTS N°29 ★ DESARROLLO DE SISTEMAS WEB ★ TP1 · 2026 ★</span>
+    </div>
+
     <main>
-      <section id="presentacion" class="hero">
-        <h1 id="main-title">Equipo 7</h1>
-        <p class="descripcion-equipo">
-          Somos un grupo de estudiantes del IFTS N.°29 enfocados en el
-          desarrollo de soluciones web modernas, combinando diseño prolijo con
-          funcionalidad técnica.
+      <section class="hero">
+        <h1 class="game-title">EQUIPO 7</h1>
+        <p class="hero-sub">IFTS N.°29 · DESARROLLO DE SISTEMAS WEB</p>
+        <p class="hero-desc">
+          Somos un grupo de estudiantes del IFTS N.°29 enfocados en el desarrollo
+          de soluciones web modernas, combinando diseño prolijo con funcionalidad técnica.
         </p>
+        <span class="blink">▶ INSERT COIN TO CONTINUE ◀</span>
       </section>
 
-      <section id="integrantes" class="grid-integrantes">
-        <h2>Nuestros Integrantes</h2>
-        <p>Selecciona a un integrante para ver su tarjeta de presentación:</p>
-        <ul class="lista-integrantes">
-          <li>
-            <a href="caloni.html" class="btn-integrante">Adriano Caloni </a>
-          </li>
-          <li>
-            <a href="gutierrez.html" class="btn-integrante"
-              >Emiliano Gutierrez</a
-            >
-          </li>
-          <li>
-            <a href="imperiales.html" class="btn-integrante"
-              >Jeremias Imperiales</a
-            >
-          </li>
-        </ul>
+      <section class="select-section">
+        <div class="select-label">— SELECT YOUR PLAYER —</div>
+
+        <div class="grid-players">
+
+          <!-- P1: Caloni -->
+          <div class="player-card">
+            <span class="player-num">P1</span>
+            <img src="img/avatarCaloni.png" alt="Avatar de Adriano Caloni" class="player-avatar" />
+            <div class="player-name">CALONI</div>
+            <div class="player-class">BACKEND WARRIOR</div>
+            <p class="player-desc">Dev backend, líder de soporte digital y co-fundador de Alcana Labs.</p>
+            <div class="mini-stats">
+              <div class="stat-row">
+                <span class="stat-lbl">NET</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:90%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">SQL</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:85%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">API</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:88%"></div></div>
+              </div>
+            </div>
+            <a href="caloni.html" class="btn-perfil">VER PERFIL ▶</a>
+          </div>
+
+          <!-- P2: Gutierrez -->
+          <div class="player-card p2">
+            <span class="player-num">P2</span>
+            <img src="img/avatarGutierrez.png" alt="Avatar de Emiliano Gutierrez" class="player-avatar" />
+            <div class="player-name">GUTIERREZ</div>
+            <div class="player-class">DATA MAGE</div>
+            <p class="player-desc">Especialista en Python, SQL y análisis de datos. Mente matemática del equipo.</p>
+            <div class="mini-stats">
+              <div class="stat-row">
+                <span class="stat-lbl">PY</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:85%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">SQL</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:80%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">DATA</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:88%"></div></div>
+              </div>
+            </div>
+            <a href="gutierrez.html" class="btn-perfil">VER PERFIL ▶</a>
+          </div>
+
+          <!-- P3: Imperiales -->
+          <div class="player-card p3">
+            <span class="player-num">P3</span>
+            <img src="img/avatarImperiales.png" alt="Avatar de Jeremias Imperiales" class="player-avatar" />
+            <div class="player-name">IMPERIALES</div>
+            <div class="player-class">FRONTEND SCOUT</div>
+            <p class="player-desc">Desarrollador web orientado al frontend y la experiencia de usuario.</p>
+            <div class="mini-stats">
+              <div class="stat-row">
+                <span class="stat-lbl">HTML</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:80%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">CSS</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:75%"></div></div>
+              </div>
+              <div class="stat-row">
+                <span class="stat-lbl">JS</span>
+                <div class="stat-bar"><div class="stat-fill" style="width:70%"></div></div>
+              </div>
+            </div>
+            <a href="imperiales.html" class="btn-perfil">VER PERFIL ▶</a>
+          </div>
+
+        </div>
       </section>
 
-      <!-- Interacción JS Obligatoria: Un botón que muestra un mensaje -->
+      <!-- Interacción JS obligatoria -->
       <section class="interaccion">
-        <button id="btn-bienvenida">Saludar al equipo</button>
+        <p>// SISTEMA DE SALUDO ACTIVADO</p>
+        <button id="btn-bienvenida">▶ SALUDAR AL EQUIPO</button>
         <p id="mensaje-dinamico"></p>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 - Proyecto Web IFTS N.°29 - Comisión Lunes/Viernes</p>
+      <p>© 2026 — EQUIPO 7 · IFTS N.°29 · DESARROLLO WEB · STAGE 01 COMPLETE</p>
     </footer>
 
     <script src="js/script.js"></script>

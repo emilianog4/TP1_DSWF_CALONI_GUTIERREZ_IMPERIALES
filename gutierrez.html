@@ -3,73 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emiliano Gutierrez</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <title>P2 GUTIERREZ — EQUIPO 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <header>
+      <div class="score-bar">
+        <span>1UP &nbsp; 00000</span>
+        <span>HI-SCORE &nbsp; 99999</span>
+        <span>2UP &nbsp; 00000</span>
+      </div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="bitacora.html">Bitácora</a></li>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="bitacora.html">BITACORA</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="perfil-container">
-      <section class="tarjeta-presentacion" id="mi-tarjeta">
-        <img
-          src="img/avatarGutierrez.png"
-          alt="Avatar de Emiliano"
-          class="foto-perfil"
-        />
+    <div class="ticker-wrap">
+      <span class="ticker-inner">★ P2 GUTIERREZ ★ DATA MAGE ★ SANTA FE ★ PYTHON · SQL · ANÁLISIS DE DATOS · MATEMÁTICA ★ INTERSTELLAR · FORREST GUMP · LOTR ★</span>
+    </div>
 
-        <h1>Emiliano Gutierrez</h1>
-        <p><strong>Ubicación: </strong>Santa Fe</p>
-        <p><strong>Edad:</strong> 34 años</p>
-        <hr />
+    <main class="perfil-wrapper">
+      <section class="tarjeta-presentacion" id="mi-tarjeta" style="border-color:var(--p2);background:rgba(255,0,255,0.02)">
 
-        <div class="info-detallada">
-          <h3>Habilidades</h3>
-          <ul>
-            <li>Programación en Python y SQL</li>
-            <li>Análisis de Datos</li>
-            <li>Matemática</li>
-            <li>Resolución de problemas</li>
-          </ul>
-
-          <hr />
-          <h3>Películas Favoritas</h3>
-          <ul>
-            <li>Interstellar</li>
-            <li>Forrest Gump</li>
-            <li>El Señor de los Anillos</li>
-          </ul>
-
-          <hr />
-          <h3>Discos Favoritos</h3>
-          <ul>
-            <li>(What's the Story) Morning Glory? - Oasis</li>
-            <li>Honestidad Brutal - Andres Calamaro</li>
-            <li>Antihumano - Ataque 77</li>
-          </ul>
+        <div class="perfil-header" style="background:linear-gradient(180deg,rgba(255,0,255,0.08) 0%,transparent 100%);border-bottom-color:rgba(255,0,255,0.2)">
+          <img src="img/avatarGutierrez.png" alt="Avatar de Emiliano Gutierrez" class="foto-perfil" style="border-color:var(--p2);box-shadow:0 0 20px rgba(255,0,255,0.5),0 0 40px rgba(255,0,255,0.2)" />
+          <h1>EMILIANO GUTIERREZ</h1>
+          <div class="perfil-clase" style="color:var(--p2)">DATA MAGE · P2</div>
+          <div class="perfil-meta">
+            <span>📍 Santa Fe</span>
+            <span>🎂 34 años</span>
+          </div>
         </div>
 
-        <hr />
-        <br />
-        <!-- Interacción JS: Botón para cambiar el estilo de la tarjeta -->
-        <button id="btn-color-perfil">Cambiar Estilo de Tarjeta</button>
+        <div class="perfil-body">
 
-        <!-- Botón obligatorio de navegación para no usar "Atrás" -->
-        <div class="navegacion-interna">
-          <a href="index.html" class="btn-volver">Volver al Inicio</a>
+          <div class="perfil-seccion">
+            <h3 style="color:var(--p2);border-bottom-color:rgba(255,0,255,0.2)">// STATS</h3>
+            <div class="stats-grid">
+              <div class="stat-line">
+                <span class="stat-name">PYTHON</span>
+                <div class="stat-track"><div class="fill" style="width:85%;background:var(--p2)"></div></div>
+                <span class="stat-val">85</span>
+              </div>
+              <div class="stat-line">
+                <span class="stat-name">SQL</span>
+                <div class="stat-track"><div class="fill" style="width:80%;background:var(--p2)"></div></div>
+                <span class="stat-val">80</span>
+              </div>
+              <div class="stat-line">
+                <span class="stat-name">ANÁLISIS</span>
+                <div class="stat-track"><div class="fill" style="width:88%;background:var(--p2)"></div></div>
+                <span class="stat-val">88</span>
+              </div>
+              <div class="stat-line">
+                <span class="stat-name">MATEMÁTICA</span>
+                <div class="stat-track"><div class="fill" style="width:90%;background:var(--p2)"></div></div>
+                <span class="stat-val">90</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="perfil-seccion">
+            <h3 style="color:var(--p2);border-bottom-color:rgba(255,0,255,0.2)">// HABILIDADES</h3>
+            <ul class="tags" style="--p1:var(--p2)">
+              <li style="background:rgba(255,0,255,0.08);border-color:var(--p2);color:var(--p2)">Python</li>
+              <li style="background:rgba(255,0,255,0.08);border-color:var(--p2);color:var(--p2)">SQL</li>
+              <li style="background:rgba(255,0,255,0.08);border-color:var(--p2);color:var(--p2)">Análisis de Datos</li>
+              <li style="background:rgba(255,0,255,0.08);border-color:var(--p2);color:var(--p2)">Matemática</li>
+              <li style="background:rgba(255,0,255,0.08);border-color:var(--p2);color:var(--p2)">Resolución de problemas</li>
+            </ul>
+          </div>
+
+          <div class="perfil-seccion">
+            <h3 style="color:var(--p2);border-bottom-color:rgba(255,0,255,0.2)">// PELÍCULAS FAVORITAS</h3>
+            <ul class="lista-items">
+              <li><span class="item-num" style="color:var(--p2)">01</span> Interstellar</li>
+              <li><span class="item-num" style="color:var(--p2)">02</span> Forrest Gump</li>
+              <li><span class="item-num" style="color:var(--p2)">03</span> El Señor de los Anillos</li>
+            </ul>
+          </div>
+
+          <div class="perfil-seccion">
+            <h3 style="color:var(--p2);border-bottom-color:rgba(255,0,255,0.2)">// DISCOS FAVORITOS</h3>
+            <ul class="lista-items">
+              <li><span class="item-num" style="color:var(--p2)">01</span> (What's the Story) Morning Glory? — Oasis</li>
+              <li><span class="item-num" style="color:var(--p2)">02</span> Honestidad Brutal — Andrés Calamaro</li>
+              <li><span class="item-num" style="color:var(--p2)">03</span> Antihumano — Ataque 77</li>
+            </ul>
+          </div>
+
         </div>
+
+        <div class="perfil-acciones">
+          <button id="btn-color-perfil" style="color:var(--p2);border-color:var(--p2)">🎨 CAMBIAR TEMA</button>
+          <a href="index.html" class="btn-volver">◀ VOLVER AL INICIO</a>
+        </div>
+
       </section>
     </main>
+
+    <footer>
+      <p>© 2026 — EQUIPO 7 · IFTS N.°29 · P2 GUTIERREZ</p>
+    </footer>
 
     <script src="js/script-perfil.js"></script>
   </body>
