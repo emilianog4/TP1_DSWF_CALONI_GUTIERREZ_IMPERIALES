@@ -95,18 +95,40 @@ nav {
 ul {
   text-align: left;
 }
+/* Estilo unificado para botones */
+#btn-color-perfil,
 .btn-volver {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 12px 0; /* Ajustamos el padding lateral a 0 porque usamos width fijo */
+  width: 250px; /* <-- Esto asegura que ambos midan exactamente lo mismo */
   background-color: var(--texto);
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center; /* Centra el texto dentro del botón */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
+/* hover */
+#btn-color-perfil:hover,
 .btn-volver:hover {
   background-color: var(--acento);
+  transform: translateY(-2px);
+}
+
+/* Alineación en la tarjeta */
+.navegacion-interna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Espacio entre los botones si decidís ponerlos juntos */
 }
 
 /* Bitacora */
